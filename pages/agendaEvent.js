@@ -15,8 +15,9 @@ const Cont = styled.div`
   box-sizing: border-box;
 `;
 
-export const agendaEvent = () => {
+const agendaEvent = () => {
   return (
     <Cont>EventosPendientes</Cont>
   )
 }
+ export default agendaEvent;

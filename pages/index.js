@@ -6,9 +6,9 @@ import Header from '@/Component/Header';
 
 import { mongooseConnect } from "@/lib/mongoose";
 import Category from "@/models/Category";
-import { Enlases } from './Enlases';
 import Footer from '@/Component/footer';
 import Contador from './Contador';
+import Enlases from './Enlases';
 
 
 const Cont = styled.div`
@@ -21,7 +21,6 @@ const Cont = styled.div`
 export default function HomePage({categories}){
   return(
     <Cont>
-      <Contador></Contador>
     <Header/>
     <Home></Home>
     <AgendaDeEventos></AgendaDeEventos>

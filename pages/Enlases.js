@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from "next/link";
 
 
-export const Enlases = () => {
+const Enlases = () => {
   return (
     <Cont>
         <ContVertical>
@@ -27,6 +27,7 @@ export const Enlases = () => {
   )
 }
 
+export default Enlases;
 
 const Cont = styled.div`
   width: 100%;
