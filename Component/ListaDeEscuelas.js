@@ -63,8 +63,8 @@ const Deporte = styled(Link)`
     font-size: 1.625rem;
   }
   &:hover{
-  background-color: #1B1C20 ;
-  color: #D6FF00;
+    background-color: #1B1C20 ;
+    color: #D6FF00;
   }
   div{
     display: flex;
@@ -77,15 +77,19 @@ const Deporte = styled(Link)`
     height: 50px;
     border-radius: 50%;
   }
+  @media (max-width: 425px) {
+  width:100%;
+
+  }
 `;
 
 const ContCart = styled.div`
-width: 100%;
-padding: 16px;
-display: flex;
-flex-wrap: wrap;
-gap:16px;
-justify-content: center;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:16px;
+  justify-content: center;
 `;
 
 export const ListaDeEscuelas = ({ escuelas }) => {
@@ -96,15 +100,15 @@ export const ListaDeEscuelas = ({ escuelas }) => {
         <p></p>
       </Title>
       <ContCart>
-      {escuelas.map((e, index) => (
-        <Deporte key={e._id} href={'/deportes/' + e._id}>
-          <div>
-          <img src={e.escudo} ></img>
-          <h4>{e.title}</h4>
-          </div>
-          <AiOutlineArrowRight className='icon'/>
-        </Deporte>
-      ))}
+        {escuelas.map((e) => (
+          <Deporte key={e._id} href={'/Escuela/' + e._id}>
+            <div>
+              <img src={e.escudo} alt={e.title} />
+              <h4>{e.title}</h4>
+            </div>
+            <AiOutlineArrowRight className='icon'/>
+          </Deporte>
+        ))}
       </ContCart>
     </ContPage>
   );

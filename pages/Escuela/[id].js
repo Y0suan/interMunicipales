@@ -4,12 +4,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaRankingStar } from 'react-icons/fa6';
 
-import Category from '@/models/Category';
-import { Evento } from '@/models/Eventos';
-import { CardEventos } from '@/Component/CardEventos';
-import { CardEventos2 } from '@/Component/CardEventos2';
 import Header from '@/Component/Header';
 import Footer from '@/Component/footer';
+import  Escuela  from '@/models/Escuelas';
+
+
 
 const Cont = styled.div`
 margin:0;
@@ -76,45 +75,31 @@ const Title = styled.h1`
   font-weight: 600;
 `;
 
-const DeportesHome = ({ deporte }) => {
-
-  const paragraphs = deporte.reglamento.split('. ')
-
+const EscuelaPage = ({ escuela }) => {
   return (
-    <> 
-    <Header></Header>   
-    <Cont>
-      <ContTitle>
-        <FaRankingStar className='icon'/>
-      <Title>{deporte.name}</Title>
-      </ContTitle>    
-      <ContText> 
-     {paragraphs.map((paragraph, index) => (
-          <React.Fragment key={index}>
-            <p>{paragraph}</p>
-          </React.Fragment>
-        ))}
-        </ContText> 
-    </Cont>
-    <Footer></Footer>
+    <>
+      <Header />
+      <Cont>
+        <ContTitle>
+          <FaRankingStar className='icon' />
+          <Title>{escuela.title}</Title>
+        </ContTitle>
+      </Cont>
+      <Footer />
     </>
   );
 };
 
-export default DeportesHome;
+export default EscuelaPage;
 
 export async function getServerSideProps(context) {
   await mongooseConnect();
   const { id } = context.query;
-  const deporte = await Category.findById(id);
-
-  // Obtén los eventos cuya propiedad "category" sea igual al ID del deporte
-  const eventos = await Evento.find({ category: deporte._id });
+  const escuela = await Escuela.findById(id);
 
   return {
     props: {
-      deporte: JSON.parse(JSON.stringify(deporte)),
-      eventos: JSON.parse(JSON.stringify(eventos)),
+      escuela: JSON.parse(JSON.stringify(escuela)),
     },
   };
 }

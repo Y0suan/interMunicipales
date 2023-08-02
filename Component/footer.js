@@ -9,8 +9,9 @@ const Footer = () => {
     <FootCont>
         <img src='https://res.cloudinary.com/dp3imi0w7/image/upload/v1690284224/olimpiadas-66tfpsn8muv0__1_-removebg-preview_dsxjf2.png'></img>
         <ContLink>
-            <NavLink href={'/Atractivos'} >Atractivos</NavLink>
-            <NavLink href={'/Actividades'} >Actividades</NavLink>
+            <NavLink href={'/EventosPendientes'} >Agenda de Eventos</NavLink>
+            <NavLink href={'/Reglamento'} >Reglamento</NavLink>
+            <NavLink href={'/Participantes'} >Participantes</NavLink>
         </ContLink> 
         <ContLink>
             <IconLink href={'/'} ><BiLogoFacebook/></IconLink>

@@ -29,7 +29,6 @@ const Image = styled.div`
   width: auto;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Footer = styled.div`
@@ -94,7 +93,7 @@ export const AgendaDeEventos = () => {
       
       <Gallery>
         <Image >
-          <Subtitle href={'/'} >eventos ya finalizados<AiOutlineArrowRight/> </Subtitle>
+          <Subtitle href={'/EventosFinalizados'} >eventos ya finalizados<AiOutlineArrowRight/> </Subtitle>
         </Image>
         <Image >
           <Subtitle href={'/EventosPendientes'} >eventos pendientes<AiOutlineArrowRight/></Subtitle>

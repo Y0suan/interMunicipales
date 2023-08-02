@@ -9,6 +9,7 @@ import Category from "@/models/Category";
 import Footer from '@/Component/footer';
 import Contador from './Contador';
 import Enlases from './Enlases';
+import Loader from '@/Component/Loader';
 
 
 const Cont = styled.div`

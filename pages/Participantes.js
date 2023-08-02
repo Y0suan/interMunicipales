@@ -45,6 +45,10 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 color:white;
+@media (max-width: 425px) {
+  width:100%;
+
+  }
 `
 
 const Title = styled.h1`
@@ -54,6 +58,10 @@ const Title = styled.h1`
   font-weight: 900;
   font-size:4.938rem;
   line-height:70px;
+  @media (max-width: 425px) {
+      font-size: 3.063rem;
+      line-height:50px;
+  }
 `;
 
 

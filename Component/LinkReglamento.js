@@ -73,7 +73,7 @@ const LinkReglamento = ({ deportes }) => {
   return (
     <ContPage>
       <Title>
-        <h1>Lista de Deportesf</h1>
+        <h1>Lista de Deportes</h1>
         <p></p>
       </Title>
       {deportes.map((d, index) => (
