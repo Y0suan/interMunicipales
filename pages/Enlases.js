@@ -9,7 +9,7 @@ const Enlases = () => {
         <ContVertical>
         <ContWhite>
             <p>
-            Leer reglamentos de Olimpiadas Estudiantiles asegura éxito, respeto, evita descalificaciones y prepara adecuadamente a competidores. 
+            Leer el reglamentos de Olimpiadas Estudiantiles asegura éxito, respeto, evita descalificaciones y prepara adecuadamente a los competidores. 
             </p>
             <Link className='link' href={'https://drive.google.com/file/d/1-GNWQnDhKQFiXo-COjg73s881gNBL0-c/view?usp=sharing'} target='_blank' rel='noopener noreferrer' >Reglamento</Link>
         </ContWhite>

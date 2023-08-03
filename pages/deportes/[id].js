@@ -8,6 +8,8 @@ import Category from '@/models/Category';
 import { Evento } from '@/models/Eventos';
 import { CardEventos } from '@/Component/CardEventos';
 import { CardEventos2 } from '@/Component/CardEventos2';
+import Header from '@/Component/Header';
+import Footer from '@/Component/footer';
 
 const Cont = styled.div`
 margin:0;
@@ -57,9 +59,15 @@ width: 90%;
 `;
 
 const Title = styled.h1`
-  font-size: 36px;
-  line-height: 30px;
-  font-weight: 600;
+  margin:0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size:4.938rem;
+  line-height:70px;
+  @media (max-width: 425px) {
+  font-size:2.938rem;   
+  }
 `;
 
 const DeportesHome = ({ deporte, eventos }) => {
@@ -68,6 +76,8 @@ const DeportesHome = ({ deporte, eventos }) => {
   console.log(eventos);
 
   return (
+    <>
+      <Header></Header>
     <Cont>
       <ContTitle>
         <FaRankingStar className='icon'/>
@@ -79,6 +89,8 @@ const DeportesHome = ({ deporte, eventos }) => {
       ))}
 </ContCart>      
     </Cont>
+    <Footer></Footer>
+    </>
   );
 };
 

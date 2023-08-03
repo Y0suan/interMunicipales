@@ -117,7 +117,7 @@ export const Home = () => {
             </Title>
             <ContLink>
                 <p>
-                solo los delegados con permisos  de la institucion podran realizar las inscripciones 
+                Solo los delegados con permisos de la institución podrán realizar las inscripciones
                 </p>
             </ContLink>
         </Footer>

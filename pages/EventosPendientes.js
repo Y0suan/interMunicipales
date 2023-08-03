@@ -49,7 +49,7 @@ const Title2 = styled.h3`
   text-transform: uppercase;
   font-weight: 700;
   font-size:1.25rem;
-  line-height:0px;
+  line-height:1.5rem;
   @media (max-width: 425px) {
     line-height:1.3rem;    
 }
@@ -113,7 +113,7 @@ const EventosPendientes = ({categories}) => {
 <StyledHorizontal>
         <ContWhite>
         <p>
-         Si el evento que buscas ya finalizó, puedes buscar entre los resultados para ver los detalles y las estadísticas de dicho evento. En caso de que el evento aún no esté creado, puedes acceder al panel de administración para crear y gestionar nuevos eventos.
+        Si el evento que buscas ya finalizó, puedes buscar entre los resultados para ver los detalles y las estadísticas de dicho evento.
         </p>
         <Link href={'/'} className="link">
          Eventos Finalizados
