@@ -67,6 +67,10 @@ const Title = styled.h1`
   font-weight: 900;
   font-size:4.938rem;
   line-height:70px;
+  @media (max-width: 425px) {
+  font-size:3rem;
+  line-height:2.9rem;
+  }
 `;
 
 export async function getServerSideProps() {
