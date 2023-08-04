@@ -10,6 +10,94 @@ import { Escuela } from '@/models/Escuelas';
 import { Delegados } from '@/models/Delegados';
 
 
+const EscuelaPage = ({ escuela, filteredDelegados }) => {
+
+  console.log(filteredDelegados);
+
+
+  const allDelegados = filteredDelegados.reduce((acc, item) => {
+    // Parsear los strings JSON en el array 'delegados'
+    const delegados = item.delegados.map((delegadoStr) => JSON.parse(delegadoStr));
+    return [...acc, ...delegados];
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <Cont>
+        <ContInfo>
+          <ContDepo> 
+            <Title>Sigue a tu institución en todos sus eventos</Title>
+            <LinkHover  href={'/EventosPendientes'} > <IoIosArrowForward className='icon' /></LinkHover>
+          </ContDepo>
+
+          <ContEscuela>
+            <ContTitle>
+              <Title>{escuela.title}</Title>
+            </ContTitle>
+             <ContEnEspera>
+              <h3>Delegados</h3>
+             <Title2>
+             {allDelegados.map((delegado, index) => (
+             <div key={index}>
+             <p>{index+1} - {delegado.nombre}</p>
+             </div>
+             ))}
+          </Title2>  
+         </ContEnEspera>
+          </ContEscuela>
+        </ContInfo>
+      </Cont>
+
+      <Footer />
+    </>
+  );
+};
+
+
+export default EscuelaPage;
+
+export async function getServerSideProps(context) {
+  try {
+    await mongooseConnect();
+    const { id } = context.query;
+
+    // Consulta para obtener la escuela por su ID
+    const escuela = await Escuela.findById(id);
+
+    // Verificar si se encontró la escuela
+    if (!escuela) {
+      return {
+        notFound: true,
+      };
+    }
+
+    const title = escuela.title;
+
+    // Consulta para obtener los delegados asociados a la escuela con el mismo valor en la propiedad escuela
+    const delegados = await Delegados.find({ escuela: title });
+
+    return {
+      props: {
+        escuela: JSON.parse(JSON.stringify(escuela)),
+        filteredDelegados: JSON.parse(JSON.stringify(delegados)),
+      },
+    };
+  } catch (error) {
+    console.error('Error al obtener la escuela:', error);
+    return {
+      props: {
+        escuela: null,
+        filteredDelegados: [],
+      },
+    };
+  }
+}
+
+
+
+
+
 
 const Cont = styled.div`
 margin:0;
@@ -67,6 +155,7 @@ height: auto;
 `;
 const ContEscuela = styled.div`
 width: 70%;
+height: auto;
 display:flex;
 flex-direction: column;
 gap:8px;
@@ -78,16 +167,28 @@ height: auto;
 const ContEnEspera = styled.div`
 box-sizing: border-box;
 padding:16px;
-overflow: hidden;
 border-radius:16px;
 width: 100%;
-height: 65%;
+height: 80%;
 background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('https://images.unsplash.com/photo-1519432359516-73a2bb421826?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
 background-size: cover;
 display: flex;
-justify-content: start; 
+justify-content: space-evenly; 
 align-items: center;
 box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+h3{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size:4rem;
+  line-height:1rem;
+  color:#C6C7C8;
+}
+p{
+
+}
+@media (max-width: 425px) {
+flex-direction: column;
+  }
 `;
 
 
@@ -126,16 +227,15 @@ const Title = styled.h1`
   }
 `;
 
-const Title2 = styled.h1`
+const Title2 = styled.div`
   margin:0;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size:2.938rem;
-  line-height:2.8rem;
-  color:#D6FF00;
+  font-weight: 800;
+  font-size:1.938rem;
+  line-height:1.9rem;
+  color:#C6C7C8;
 
   @media (max-width: 425px) {
-  font-size:2.938rem;   
+  font-size:1.938rem;   
   }
 `; 
 const LinkHover = styled(Link)`
@@ -157,52 +257,3 @@ const LinkHover = styled(Link)`
         background-color: #1B1C20;
     }
 `;
-
-const EscuelaPage = ({ escuela, filteredDelegados }) => {
-  console.log(filteredDelegados)
-  return (
-    <>
-      <Header />
-      <Cont>
-        <ContInfo>
-          <ContDepo> 
-            <Title>Sigue a tu institución en todos sus eventos</Title>
-            <LinkHover  href={'/EventosPendientes'} > <IoIosArrowForward className='icon' /></LinkHover>
-          </ContDepo>
-
-          <ContEscuela>
-            <ContTitle>
-              <Title>{escuela.title}</Title>
-            </ContTitle>
-             <ContEnEspera>
-               <Title2>Estamos a la espera de recibir más información por parte de las instituciones</Title2>
-            </ContEnEspera>
-          </ContEscuela>
-        </ContInfo>
-      </Cont>
-      <Footer />
-    </>
-  );
-};
-
-export default EscuelaPage;
-
-export async function getServerSideProps(context) {
-  await mongooseConnect();
-  const { id } = context.query;
-  const escuela = await Escuela.findById(id);
-
-  // Suponiendo que tienes una relación uno a muchos entre Escuela y Delegados,
-  // puedes obtener todos los delegados asociados a la escuela
-  const delegados = await Delegados.find();
-
-  // Filtrar los delegados que tienen el mismo valor en 'escuela' que el 'title' de la escuela
-  const filteredDelegados = delegados.filter((delegado) => delegado.escuela === escuela.title);
-
-  return {
-    props: {
-      escuela: JSON.parse(JSON.stringify(escuela)),
-      filteredDelegados: JSON.parse(JSON.stringify(filteredDelegados)),
-    },
-  };
-}
