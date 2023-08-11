@@ -99,7 +99,7 @@ export const CardEventos2 = ({evet}) => {
         <p>/</p>
         <p>{evet.fecha}</p>
         </div>
-        <Categoria>Categoría: {evet.properties?.Categoria}</Categoria>
+        <Categoria>Categoría:{evet.properties?.Categoria || "A"}</Categoria>
     </div>
     </Body>
     </CartCont>
