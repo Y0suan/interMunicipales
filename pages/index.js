@@ -10,6 +10,7 @@ import Footer from '@/Component/footer';
 import Contador from './Contador';
 import Enlases from './Enlases';
 import Loader from '@/Component/Loader';
+import EventosHome from '@/pages/EventosHome';
 
 
 const Cont = styled.div`
@@ -24,6 +25,7 @@ export default function HomePage({categories}){
     <Cont>
     <Header/>
     <Home></Home>
+    <EventosHome></EventosHome>
     <AgendaDeEventos></AgendaDeEventos>
     <Enlases></Enlases>
     <Footer></Footer>

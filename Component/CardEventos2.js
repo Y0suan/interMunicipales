@@ -6,6 +6,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 
 const CartCont = styled.div`
+overflow:hidden;
+position:relative;
   width: 300px;
   background-color: white;
   border:1px solid #1B1C20 ;
@@ -18,6 +20,8 @@ const CartCont = styled.div`
   background-color: white;
   color: #1B1C20;
   transition: 0.9ms;
+padding-bottom: 40px;
+
   /* &:hover{
         color:#D6FF00;
         border: 1px solid white;
@@ -65,7 +69,15 @@ font-size:33px;
   color:#D6FF00;
 }
 `;
-
+const Categoria = styled.h4`
+bottom:0;
+left:-15px;
+position :absolute;
+padding: 15px 20px ;
+      background-color: #1B1C20;
+      color: #D6FF00;
+      border-radius: 16px;
+`;
 
 export const CardEventos2 = ({evet}) => {
     const id = evet._id 
@@ -87,6 +99,7 @@ export const CardEventos2 = ({evet}) => {
         <p>/</p>
         <p>{evet.fecha}</p>
         </div>
+        <Categoria>Categoría: {evet.properties?.Categoria}</Categoria>
     </div>
     </Body>
     </CartCont>

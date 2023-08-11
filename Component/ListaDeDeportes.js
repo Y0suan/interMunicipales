@@ -71,6 +71,7 @@ const Deporte = styled(Link)`
 
 export const ListaDeDeportes = ({ deportes }) => {
   // const url = '/deportes/' + _id;
+  console.log(deportes)
   return (
     <ContPage>
       <Title>

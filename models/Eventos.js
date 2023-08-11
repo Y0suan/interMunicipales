@@ -2,12 +2,12 @@ import mongoose, { model, Schema, models } from "mongoose";
 
 const EventoSchema = new Schema(
   {
-    title: { type: String},
-    category: { type: mongoose.Types.ObjectId, ref: 'Category' },
+    title: { type: String },
+    category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
     properties: { type: Object },
     hubicacion: { type: String },
     hora: { type: String },
-    fecha: { type: String},
+    fecha: { type: String },
     description: { type: String },
     equipoA: { type: String },
     equipoB: { type: String },
@@ -17,5 +17,4 @@ const EventoSchema = new Schema(
   }
 );
 
-export const Evento = models.Evento || model('Evento', EventoSchema);
-          
+export const Evento = models?.Evento || model('Evento', EventoSchema);
