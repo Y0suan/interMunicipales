@@ -17,7 +17,7 @@ const Scroll = styled.div`
   height: auto;
   position: relative;
   box-sizing: border-box;
-  
+
 `;
 
 const Cont = styled.div`

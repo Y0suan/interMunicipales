@@ -2,6 +2,10 @@ import Header from '@/Component/Header';
 import Footer from '@/Component/footer';
 import React from 'react'
 import styled from 'styled-components';
+import { ListaDeDeportes } from '@/Component/ListaDeDeportes';
+import Category from "@/models/Category";
+import { mongooseConnect } from "@/lib/mongoose";
+import { ListaDeDeportesFin } from '@/Component/ListaDeDeportesFin';
 
 
 const Cont = styled.div`
@@ -42,7 +46,7 @@ const Title = styled.h1`
   }
 
 `
-const EventosFinalizados = () => {
+const EventosFinalizados = ({categories}) => {
   return (
     <>
     <Header></Header>
@@ -52,6 +56,7 @@ const EventosFinalizados = () => {
                 no tenemos eventos finalizados aun
             </Title>
         </ContTitle>
+        {/* <ListaDeDeportesFin deportes={categories} ></ListaDeDeportesFin> */}
     </Cont> 
     <Footer></Footer>
     </>
@@ -60,3 +65,24 @@ const EventosFinalizados = () => {
 }
 
 export default EventosFinalizados
+
+export async function getServerSideProps() {
+    try {
+      await mongooseConnect();
+  
+      // Consultar todos los objetos en el modelo Category
+      const categories = await Category.find({});
+      return {
+        props: {
+          categories: JSON.parse(JSON.stringify(categories)),
+        },
+      };
+    } catch (error) {
+      console.error("Error al obtener las categorías:", error);
+      return {
+        props: {
+          categories: [],
+        },
+      };
+    }
+  }
