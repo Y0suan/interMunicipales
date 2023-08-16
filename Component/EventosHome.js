@@ -23,7 +23,7 @@ const Scroll = styled.div`
 const Cont = styled.div`
   box-sizing: border-box;
   margin: 0;
-  padding: 0px;
+  padding: 8px;
   width: 100%;
   height: auto;
   display: flex;

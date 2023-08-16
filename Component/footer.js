@@ -14,9 +14,9 @@ const Footer = () => {
             <NavLink href={'/Participantes'} >Participantes</NavLink>
         </ContLink> 
         <ContLink>
-            <IconLink href={'/'} ><BiLogoFacebook/></IconLink>
+            {/* <IconLink href={'/'} ><BiLogoFacebook/></IconLink>
             <IconLink href={'/'} ><BiLogoInstagram/></IconLink>
-            <IconLink href={'/'} ><BiLogoWhatsapp/></IconLink>
+            <IconLink href={'/'} ><BiLogoWhatsapp/></IconLink> */}
         </ContLink>   
     </FootCont>
   )
