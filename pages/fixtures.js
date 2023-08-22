@@ -49,9 +49,9 @@ const fixtures = () => {
               <h5>Categoria: C </h5>
               </div>
 
-               <Link href={'/'}  target="_blank"  className='drive'>
+               <a href='https://drive.google.com/file/d/16Xa1ODW0VmolpwJNgkc7nR_M_f4jcRJA/view?usp=sharing'  target="_blank"  className='drive'>
                  <FaGoogleDrive/>
-               </Link>
+               </a>
             </LinksFixture>
 
         </ContLinks>

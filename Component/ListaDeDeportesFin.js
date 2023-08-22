@@ -79,7 +79,7 @@ export const ListaDeDeportesFin = ({ deportes }) => {
         <p></p>
       </Title>
       {deportes.map((d, index) => (
-        <Deporte key={d._id} href={'/deportes/' + d._id}>
+        <Deporte key={d._id} href={'/deportes/finalizados/' + d._id}>
           <h4>{d.name}</h4>
           <AiOutlineArrowRight className='icon'/>
         </Deporte>

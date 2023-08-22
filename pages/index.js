@@ -22,13 +22,12 @@ const Cont = styled.div`
 
 
 
-export default function HomePage({eventos}){
+export default function HomePage({eventos,categories}){
   return(
     <Cont>
     <Header/>
     <Home></Home>
-    <AgendaDeEventos></AgendaDeEventos>
-    <EventosHome eventos={eventos} ></EventosHome>
+    <AgendaDeEventos eventos={eventos} deportes={categories} ></AgendaDeEventos>
     <Enlases></Enlases>
     <Fixture/>
     <Footer></Footer>

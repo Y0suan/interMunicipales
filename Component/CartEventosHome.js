@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link';
 import { IoFootballOutline } from 'react-icons/io5';
+
+
 
 const Cont = styled.div`
   border:1px solid #1B1C20;
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
-  min-width: 200px;
+  min-width: 250px;
   height:auto;
   display: flex;
   flex-direction: column;
@@ -18,6 +20,10 @@ const Cont = styled.div`
   border-radius:16px;
   .cont1{
     width: 100%;
+  }
+  p{
+    padding: 0;
+    margin: 0px 8px;
   }
 `;
 const Title = styled.div`
@@ -48,17 +54,36 @@ p{
 }
 `;
 
-const CartEventosHome = ({ evet }) => {
+const Sexo = styled.div`
+width: 100%;
+margin-bottom: 8px;
+`;
+
+
+const CartEventosHome = ({ evet , deportes }) => {
+
   return (
     <Cont>
+
+     {evet.ganador && <p>GANADOR: {evet.ganador}</p>}
+
       <Icon>
-      <IoFootballOutline className='icon'></IoFootballOutline>
       <Title className='header'>
             <p className='A' >{evet.equipoA}</p>
             <p>vs</p>
             <p className='B' >{evet.equipoB}</p>
       </Title>
       </Icon>
+      <Sexo>
+      {evet.properties && Object.keys(evet.properties).map((key, index) => (
+                <p key={index}>
+                  <strong>{key}:</strong> {evet.properties[key]}
+                </p>
+              ))}
+      <p>
+      {deportes.find(deporte => deporte._id === evet.category)?.name || 'Desconocido'}
+      </p>
+      </Sexo>
       <Contenido>
         <p>{evet.hubicacion}</p>
         <p>/</p>
@@ -71,3 +96,5 @@ const CartEventosHome = ({ evet }) => {
 }
 
 export default CartEventosHome
+
+

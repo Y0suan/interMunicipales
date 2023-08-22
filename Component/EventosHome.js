@@ -30,6 +30,10 @@ const Cont = styled.div`
   flex-wrap: nowrap;
   gap: 8px;
   overflow: hidden;
+  @media (max-width: 425px) {
+    overflow-x: scroll;
+
+  }
 `;
 
 const ScrollButton = styled.button`
@@ -99,12 +103,12 @@ transition: 3.5s;
   }
 `;
 
-const EventosHome = ({ eventos }) => {
+const EventosHome = ({ eventos , deportes }) => {
   const contRef = useRef(null);
 
   const handleScrollLeft = () => {
     contRef.current.scrollBy({
-      left: -280,
+      left: -300,
       behavior: 'smooth',
       
     });
@@ -112,10 +116,13 @@ const EventosHome = ({ eventos }) => {
 
   const handleScrollRight = () => {
     contRef.current.scrollBy({
-      left: 280,
+      left: 300,
       behavior: 'smooth',
     });
   };
+
+ 
+
 
   return (
     <Scroll>
@@ -123,7 +130,7 @@ const EventosHome = ({ eventos }) => {
       <ScrollRightButton onClick={handleScrollRight}><AiOutlineArrowRight className='icon' /></ScrollRightButton>
       <Cont ref={contRef}>
         {eventos.map((ev, index) => (
-          <CartEventosHome key={ev._id} evet={ev} />
+          <CartEventosHome key={ev._id} evet={ev} deportes={deportes} />
         ))}
       </Cont>
     </Scroll>

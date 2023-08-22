@@ -2,9 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import EventosHome from './EventosHome';
 
 
 const Cont = styled.div`
+  width: 100%;
   margin: 0;
   padding: 16px;
   display: flex;
@@ -16,6 +18,7 @@ const Cont = styled.div`
 `;
 
 const Gallery = styled.div`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
@@ -23,6 +26,7 @@ const Gallery = styled.div`
   padding: 20px;
   display: flex;
   flex-wrap:wrap;
+  flex-direction : column;
 `;
 
 const Image = styled.div`
@@ -83,7 +87,12 @@ padding:8px;
   }
 `
 
-export const AgendaDeEventos = () => {
+export const AgendaDeEventos = ({eventos,deportes}) => {
+
+  const filteredPendientes = eventos.filter(eventos => !eventos.ganador);
+
+  const filteredFinalizados = eventos.filter(eventos => eventos.ganador && eventos.ganador);
+  
   return (
     <Cont>
       <Footer>
@@ -95,9 +104,11 @@ export const AgendaDeEventos = () => {
         <Image >
           <Subtitle href={'/EventosFinalizados'} >eventos ya finalizados<AiOutlineArrowRight/> </Subtitle>
         </Image>
+        <EventosHome eventos={filteredFinalizados} deportes={deportes} ></EventosHome>
         <Image >
           <Subtitle href={'/EventosPendientes'} >eventos pendientes<AiOutlineArrowRight/></Subtitle>
         </Image>
+        <EventosHome eventos={filteredPendientes} deportes={deportes} ></EventosHome>
       </Gallery>
     </Cont>
   );
