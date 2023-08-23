@@ -98,8 +98,13 @@ export const CardEventos2 = ({evet}) => {
         <p>{evet.hora}</p>
         <p>/</p>
         <p>{evet.fecha}</p>
+        {evet.properties && Object.keys(evet.properties).map((key, index) => (
+                <p key={index}>
+                  <strong>{key}:</strong> {evet.properties[key]}
+                </p>
+              ))}
         </div>
-        <Categoria>Categoría:{evet.properties?.Categoria || "A"}</Categoria>
+        <Categoria>Categoría:{evet.properties?.Categoria}</Categoria>
     </div>
     </Body>
     </CartCont>

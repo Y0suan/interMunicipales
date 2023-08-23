@@ -5,6 +5,8 @@ import Header from '@/Component/Header';
 import Footer from '@/Component/footer';
 import { BiFootball } from 'react-icons/bi'
 import { FaGoogleDrive } from 'react-icons/fa6';
+import { FaVolleyballBall } from 'react-icons/fa';
+
 
 
 
@@ -53,6 +55,21 @@ const fixtures = () => {
                  <FaGoogleDrive/>
                </a>
             </LinksFixture>
+            
+
+            <LinksFixture>
+              <Icon>
+              <FaVolleyballBall className='icon' />              
+              </Icon>
+              <div>
+              <h4>Voley</h4>
+              <h5>Categoria: C </h5>
+              </div>
+
+               <a href='https://drive.google.com/file/d/16Xa1ODW0VmolpwJNgkc7nR_M_f4jcRJA/view?usp=sharing'  target="_blank"  className='drive'>
+                 <FaGoogleDrive/>
+               </a>
+            </LinksFixture>
 
         </ContLinks>
         <Footer></Footer>
@@ -72,6 +89,8 @@ align-items: center;
 flex-wrap: wrap;
 gap:8px;
 padding: 8px;
+transition: 5s;
+
 `
 
 
@@ -124,5 +143,45 @@ color:black;
     border-radius: 50%;
     border: 1px solid black;
     padding: 6px;
+}
+`
+
+
+const LinksFixtureReponsi = styled.div`
+border-radius: 16px;
+box-sizing: border-box;
+width: 300px;
+height: 85px;
+padding:8px;
+display: flex;
+justify-content: space-evenly;
+align-items: flex-start;
+background-color: #1B1C20;
+color:white;
+transition: 5s;
+.drive{
+    text-decoration: none;
+    color:white;
+}
+h4{
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 0px; /* 150% */
+letter-spacing: 0.15px;
+}
+h5{
+    font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 0px; /* 142.857% */
+letter-spacing: 0.25px;
+}
+&:hover{
+  width: 300px;
+  height: 600px;
+  transition: 5s;
 }
 `

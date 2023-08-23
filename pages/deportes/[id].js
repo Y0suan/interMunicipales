@@ -75,6 +75,8 @@ const DeportesHome = ({ deporte, eventos }) => {
   console.log(deporte);
   console.log(eventos);
 
+  const filteredPendientes = eventos.filter(eventos => !eventos.ganador);
+
   return (
     <>
       <Header></Header>
@@ -84,7 +86,7 @@ const DeportesHome = ({ deporte, eventos }) => {
       <Title>{deporte.name}</Title>
       </ContTitle>
 <ContCart>
-      {eventos.map((ev, index) => (
+      {filteredPendientes.map((ev, index) => (
           <CardEventos2 key={ev._id} evet={ev} />
       ))}
 </ContCart>      

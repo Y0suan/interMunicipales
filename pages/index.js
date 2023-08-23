@@ -29,7 +29,7 @@ export default function HomePage({eventos,categories}){
     <Home></Home>
     <AgendaDeEventos eventos={eventos} deportes={categories} ></AgendaDeEventos>
     <Enlases></Enlases>
-    <Fixture/>
+    {/* <Fixture/> */}
     <Footer></Footer>
     </Cont>
   );

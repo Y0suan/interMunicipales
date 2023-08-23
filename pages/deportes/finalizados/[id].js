@@ -74,11 +74,8 @@ const Title = styled.h1`
 const DeportesHome = ({ deporte, eventos }) => {
 
 
-  const filteredEventos = eventos.filter(eventos => eventos.ganador && eventos.ganador);
+  const filteredEventos = eventos.filter(eventos => eventos.ganador && eventos.ganador); 
 
-  // Aquí puedes hacer lo que necesites con el deporte y los eventos
-  console.log(deporte);
-  console.log(eventos);
 
   return (
     <>
