@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { BsPlusLg } from 'react-icons/bs';
 import Link from "next/link";
 
 const ContPage = styled.div`
@@ -106,7 +106,7 @@ export const ListaDeEscuelas = ({ escuelas }) => {
               <img src={e.escudo} alt={e.title} />
               <h4>{e.title}</h4>
             </div>
-            <AiOutlineArrowRight className='icon'/>
+            <BsPlusLg className='icon'/>
           </Deporte>
         ))}
       </ContCart>

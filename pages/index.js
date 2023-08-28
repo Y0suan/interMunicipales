@@ -13,6 +13,8 @@ import Enlases from './Enlases';
 import Loader from '@/Component/Loader';
 import EventosHome from '@/Component/EventosHome';
 import Fixture from '@/Component/Fixture';
+import Atletismo from '@/Component/Atletismo';
+import AgendaPorFecha from '@/Component/AgendaPorFecha';
 
 
 const Cont = styled.div`
@@ -30,6 +32,8 @@ export default function HomePage({eventos,categories}){
     <AgendaDeEventos eventos={eventos} deportes={categories} ></AgendaDeEventos>
     <Enlases></Enlases>
     {/* <Fixture/> */}
+    {/* <Atletismo></Atletismo> */}
+    <AgendaPorFecha eventos={eventos} deportes={categories} ></AgendaPorFecha>
     <Footer></Footer>
     </Cont>
   );

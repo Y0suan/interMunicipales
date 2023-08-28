@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { BsPlusLg } from 'react-icons/bs';
 import Link from "next/link";
 
 const ContPage = styled.div`
@@ -30,13 +30,13 @@ const Title = styled.div`
 const Deporte = styled(Link)`
   text-decoration: none;
   color:#1B1C20;
-  border-radius: 18px;
+ 
   width: 80%;
   display: flex;
   justify-content: space-between ;
   align-items: center;
   padding: 16px;
-  border:1px solid #1B1C20;
+  border-bottom:1px solid #1B1C20;
   margin-bottom: 16px;
   background-color: white;
   transition: 0.3s;
@@ -47,7 +47,7 @@ const Deporte = styled(Link)`
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.625rem;
+    font-size: 2.438rem;
   }
   p {
     font-size: 1.625rem;
@@ -66,6 +66,10 @@ const Deporte = styled(Link)`
   &:hover{
   background-color: #1B1C20 ;
   color: #D6FF00;
+  .icon{
+    transition: 1s;
+    transform: rotate(0.2turn);
+  }
   }
 `;
 
@@ -81,7 +85,7 @@ export const ListaDeDeportes = ({ deportes }) => {
       {deportes.map((d, index) => (
         <Deporte key={d._id} href={'/deportes/' + d._id}>
           <h4>{d.name}</h4>
-          <AiOutlineArrowRight className='icon'/>
+          <BsPlusLg className='icon'/>
         </Deporte>
       ))}
     </ContPage>

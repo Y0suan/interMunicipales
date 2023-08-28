@@ -9,6 +9,7 @@ const CartCont = styled.div`
 overflow:hidden;
 position:relative;
   width: 300px;
+  height: 140px;
   background-color: white;
   border:1px solid #1B1C20 ;
   border-radius: 18px;
@@ -71,9 +72,9 @@ font-size:33px;
 `;
 const Categoria = styled.h4`
 bottom:0;
-left:-15px;
+left:-12px;
 position :absolute;
-padding: 15px 20px ;
+padding: 15px 25px ;
       background-color: #1B1C20;
       color: #D6FF00;
       border-radius: 16px;
