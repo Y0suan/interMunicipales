@@ -146,7 +146,7 @@ const EventosFinalizados = ({categories}) => {
     <Cont>
     <ContTitle>   
             <Title>    
-                no tenemos eventos finalizados aun
+                Mira los Resultados de los eventos 
             </Title>
         </ContTitle>
         <ListaDeDeportesFin deportes={categories} ></ListaDeDeportesFin>
