@@ -49,9 +49,11 @@ font-family: 'Roboto', sans-serif;
 }
 @media (max-width: 425px) {
 width:100%;
-padding:16px;
+padding:8px;
+display:flex;
+justify-content: center;
 p{
-    width: 100%;
+  display:none;
 }
 }
 
