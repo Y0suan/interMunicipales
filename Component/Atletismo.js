@@ -9,16 +9,14 @@ const Atletismo = () => {
     <StyledCont>
         <StyledHeader>
             <StyledMitad>
-        <Title>Explora los resultados de atletismo</Title>
+        <Title>Explora los diversos recorridos de la maratón</Title>
             </StyledMitad>
             <StyledMitad>
-        <Text>Descubre a los atletas más destacados de nuestra competición. Con determinación, habilidad y pasión, estos participantes sobresalieron en sus disciplinas</Text>
-        <StyledLink2 href={'/'} >Ver Clasificatoria</StyledLink2>
+                <p>Explora la esencia competitiva de la maratón intercolegial, donde los recorridos se convierten en una prueba de fortaleza y espíritu deportivo. A lo largo de tres desafiantes trayectos, los estudiantes-atletas se enfrentarán no solo a las distancias, sino también a sus propios límites. Las calles de la ciudad se convierten en pistas de desafío, mientras que los vecindarios y las avenidas se transforman en telones de fondo de camaradería y rivalidad. Estos recorridos no solo coronarán a los campeones, sino que también forjarán memorias inolvidables de un día de competencia feroz y compañerismo duradero.</p>
+            <StyledLink2 href={'/Maraton'} >Descubre los recorridos</StyledLink2>
             </StyledMitad>
+
         </StyledHeader>
-        <StyledFooter>
-        {/* <StyledLink href={'/'} ><BsArrowUpRight className='icon' /></StyledLink> */}
-        </StyledFooter>
     </StyledCont>
   )
 }
@@ -28,7 +26,8 @@ export default Atletismo
 
 
 const StyledCont = styled.div`
-margin-top: 100px;
+margin: 34px 0px;
+height: auto;
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -36,9 +35,25 @@ align-items: center;
 const StyledHeader = styled.div`
 width: 100%;
 display:flex;
+@media (max-width: 425px) {
+flex-direction: column;
+  }
 `;
 const StyledMitad = styled.div`
+padding: 16px;
 width: 50%;
+height: auto;
+p{
+width: 70%;
+font-family: 'Roboto', sans-serif;
+}
+@media (max-width: 425px) {
+width:100%;
+padding:16px;
+p{
+    width: 100%;
+}
+}
 
 `;
 const Title = styled.h1`
@@ -89,6 +104,7 @@ color:black;
 `;
 
 const StyledLink2 = styled(Link)`
+height: auto;
     color:#1B1C20;
     color:black;
     text-decoration: none;

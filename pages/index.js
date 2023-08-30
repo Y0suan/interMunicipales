@@ -18,7 +18,7 @@ import AgendaPorFecha from '@/Component/AgendaPorFecha';
 
 
 const Cont = styled.div`
-
+height: auto;
 
 `;
 
@@ -29,11 +29,10 @@ export default function HomePage({eventos,categories}){
     <Cont>
     <Header/>
     <Home></Home>
+    <Atletismo  eventos={eventos} deportes={categories}  ></Atletismo>
     <AgendaDeEventos eventos={eventos} deportes={categories} ></AgendaDeEventos>
     <Enlases></Enlases>
     {/* <Fixture/> */}
-    {/* <Atletismo></Atletismo> */}
-    <AgendaPorFecha eventos={eventos} deportes={categories} ></AgendaPorFecha>
     <Footer></Footer>
     </Cont>
   );
