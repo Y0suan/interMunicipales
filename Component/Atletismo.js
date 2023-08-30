@@ -50,7 +50,7 @@ font-family: 'Roboto', sans-serif;
 @media (max-width: 425px) {
 width:100%;
 padding:8px;
-display:flex;
+display:flex;s
 justify-content: center;
 p{
   display:none;
