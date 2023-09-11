@@ -16,6 +16,8 @@ import Fixture from '@/Component/Fixture';
 import Atletismo from '@/Component/Atletismo';
 import AgendaPorFecha from '@/Component/AgendaPorFecha';
 import Aerobic from '@/Component/Aerobic';
+import AtletismoHome from '@/Component/AtletismoHome';
+import { NuevoHome } from '@/Component/NuevoHome';
 
 
 const Cont = styled.div`
@@ -30,8 +32,9 @@ export default function HomePage({eventos,categories}){
     <Cont>
     <Header/>
     <Home></Home>
+    <NuevoHome/>
     <Aerobic></Aerobic>
-
+     {/* <AtletismoHome></AtletismoHome> */}
     <Atletismo  eventos={eventos} deportes={categories}  ></Atletismo>
     <AgendaDeEventos eventos={eventos} deportes={categories} ></AgendaDeEventos>
     <Enlases></Enlases>
