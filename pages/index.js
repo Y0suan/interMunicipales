@@ -33,7 +33,7 @@ export default function HomePage({eventos,categories}){
     <Header/>
     <Home></Home>
     <NuevoHome/>
-    <Aerobic></Aerobic>
+    {/* <Aerobic></Aerobic> */}
      {/* <AtletismoHome></AtletismoHome> */}
     <Atletismo  eventos={eventos} deportes={categories}  ></Atletismo>
     <AgendaDeEventos eventos={eventos} deportes={categories} ></AgendaDeEventos>

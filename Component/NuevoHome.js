@@ -8,8 +8,8 @@ export const NuevoHome = () => {
   return (
     <Cont>
         <ContImg>
-            <Title>Mira la disposición de las instituciones en las gradas.</Title>
-            <StyledLink2 href={'https://res.cloudinary.com/dzqdjsrez/image/upload/v1694428836/WhatsApp_Image_2023-09-11_at_07.33.50_mfyyth.jpg'} >Mira las gradas<BsArrowRight/></StyledLink2>
+            <Title>Mira la grilla de horarios de atletismo</Title>
+            <StyledLink2 href={'https://drive.google.com/file/d/1eLQVUL7vf1S5_oN1hva1iZi5vrBQSPz4/view?usp=sharing'} target='_blank' >Descarga la Grilla<BsArrowRight/></StyledLink2>
         </ContImg>
     </Cont>
   )
