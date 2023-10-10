@@ -93,9 +93,9 @@ const DeportesPage = () => {
       <ContVoley href={'/Voley'} >
         <Title>Voley</Title>
       </ContVoley>
-      <ContFotbal href={'/Futbal'} >
+      {/* <ContFotbal href={'/Futbal'} >
         <Title>Futbol</Title>
-      </ContFotbal>
+      </ContFotbal> */}
       <ContFotsal href={'/Futsal'}>
         <Title>Futsal</Title>
       </ContFotsal>
