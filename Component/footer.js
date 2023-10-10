@@ -10,7 +10,7 @@ const Footer = () => {
         <img src='https://res.cloudinary.com/dzqdjsrez/image/upload/v1696936379/olimpiadas-66tfpsn8muv0__1_-removebg-preview_dsxjf2_2_yinag7.png'></img>
         <ContLink>
             <NavLink href={'/Voley'} >Voley</NavLink>
-            <NavLink href={'/Futbol'} >Futbol</NavLink>
+            <NavLink href={'/Futbal'} >Futbol</NavLink>
             <NavLink href={'/Futsal'} >Futsal</NavLink>
             <NavLink href={'/FutTenis'} >Futbol Tenis</NavLink>
         </ContLink> 

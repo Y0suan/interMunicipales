@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 
 import { HiOutlineDocumentArrowDown } from 'react-icons/hi2';
+import Footer from '@/Component/footer';
 
 const ContPage = styled.div`
 height: auto;
@@ -78,6 +79,7 @@ box-sizing: border-box;
 border-radius: 8px;
 max-width:300px;
 width: fit-content;
+height: min-content;
 background-color: #28282A;
 .subtitle{
     font-size: 31px;
@@ -121,7 +123,7 @@ const Futsal = () => {
                 <div className='cardCont' >
                    <CarInfo>
                       <Title className='subtitle' >Descarga el reglamento</Title>
-                      <ButtonLink href={'/'}> <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
+                      <ButtonLink href={'https://docs.google.com/document/d/1Z8BMXcPBaPW_9opBo2dImKjYqYq8vo6P/edit?usp=sharing&ouid=100664009406258689319&rtpof=true&sd=true'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
                    </CarInfo>
                    <CarInfo>
                       <Title className='subtitle' >El Sorteo se realizara el 12/10/23</Title>
@@ -131,9 +133,14 @@ const Futsal = () => {
                       <Title className='subtitle' >Proximamente....</Title>
                       <Title className='parrafo' >Podras encontrar informacion de cuando y donde se juega cada partido</Title>
                    </CarInfo>
+                   <CarInfo>
+                      <Title className='subtitle' >Futsal</Title>
+                      <Title className='parrafo' >Garantía de $ 4.000 <br/>Arbitraje  por equipo $ 4.000</Title>
+                   </CarInfo>
                 </div>
             </div>
         </ContReglamento>
+        <Footer/>
     </ContPage>
   )
 }

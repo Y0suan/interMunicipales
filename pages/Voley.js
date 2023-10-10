@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 
 import { HiOutlineDocumentArrowDown } from 'react-icons/hi2';
+import Footer from '@/Component/footer';
 
 const ContPage = styled.div`
 height: auto;
@@ -54,6 +55,7 @@ box-sizing: border-box;
     .cardCont{
         width: 100%;
         display:flex;
+        flex-wrap: wrap;
         gap:16px;
     }
     p{
@@ -73,6 +75,7 @@ padding: 16px;
 box-sizing: border-box;
 border-radius: 8px;
 max-width:300px;
+height: min-content;
 width: fit-content;
 background-color: #28282A;
 .subtitle{
@@ -113,7 +116,7 @@ const Voley = () => {
                 <div className='cardCont' >
                    <CarInfo>
                       <Title className='subtitle' >Descarga el reglamento</Title>
-                      <ButtonLink href={'/'}> <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
+                      <ButtonLink href={'https://docs.google.com/document/d/1Z8BMXcPBaPW_9opBo2dImKjYqYq8vo6P/edit?usp=sharing&ouid=100664009406258689319&rtpof=true&sd=true'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
                    </CarInfo>
                    <CarInfo>
                       <Title className='subtitle' >El Sorteo se realizara el 12/10/23</Title>
@@ -123,9 +126,18 @@ const Voley = () => {
                       <Title className='subtitle' >Proximamente....</Title>
                       <Title className='parrafo' >Podras encontrar informacion de cuando y donde se juega cada partido</Title>
                    </CarInfo>
+                   <CarInfo>
+                      <Title className='subtitle' >Fecha limite</Title>
+                      <Title className='parrafo' >Presentación de listas de Buena Fe para las diferentes disciplinas  fecha limite 12 de octubre  hasta las 12:30 hs, Polideportivo km 9</Title>
+                   </CarInfo>
+                   <CarInfo>
+                      <Title className='subtitle' >Voley</Title>
+                      <Title className='parrafo' > Garantía $ 2.000 <br/> Arbitraje por equipo $2000</Title>
+                   </CarInfo>
                 </div>
             </div>
         </ContReglamento>
+        <Footer/>
     </ContPage>
   )
 }

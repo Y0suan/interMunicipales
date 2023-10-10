@@ -52,7 +52,7 @@ const Loader = () => {
     <LoaderContainer>
       <ImageContainer>
         <RotatingImage
-          src='https://res.cloudinary.com/dp3imi0w7/image/upload/v1690284224/olimpiadas-66tfpsn8muv0__1_-removebg-preview_dsxjf2.png'
+          src='https://res.cloudinary.com/dzqdjsrez/image/upload/v1696936379/olimpiadas-66tfpsn8muv0__1_-removebg-preview_dsxjf2_2_yinag7.png'
           alt="Imagen"
         />
       </ImageContainer>
