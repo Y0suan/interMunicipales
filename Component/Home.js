@@ -1,126 +1,72 @@
 import React from 'react'
 import styled, { keyframes }  from 'styled-components'
-import { BiSolidRightArrow } from 'react-icons/bi';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 import Link from 'next/link';
 
 const Cont = styled.div`
 width: 100%;
-height: 100vh;
-display :flex;
-flex-direction: column;
+height: auto;
 box-sizing: border-box;
-padding:16px;
-
-`
-
-const Title = styled.h1`
-  margin:0;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size:4.938rem;
-  line-height:70px;
-  @media (max-width: 425px) {
-  font-size:2.938rem;
-    
-  }
-
-`
-const Subtitle = styled.h2`
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 3.063rem;
-  line-height:49px;
-`
-const Text = styled.h4`
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.438rem;
-  line-height:49px;
-`
-
-const Header = styled.div`
-width:100%;
-height:40%;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding:30px 0px;
-color:#1B1C20;
-display:flex;
-align-items: center;
-justify-content:center;
-
-`
-
-
-const Footer = styled.div`
-width:100%;
-height:60%;
-padding:0px 0;
-padding-top:30px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
-background-repeat: no-repeat;
-background-size: cover;
-border-radius: 16px;
-color:white;
-`
-const ContLink = styled.div`
-width: 90%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap:16px;
-p{
-    width:300px;
-    font-family: 'Roboto', sans-serif;
-    font-size: .8rem;
-}
-div{
-    display: flex;
-    align-items: center;
-    gap:8px;
-}
-`
-
-const ArrowLink = styled(Link)`
 display: flex;
 justify-content: center;
+`
+const Image = styled.div`
+box-sizing: border-box;
+padding:16px;
+width: 100%;
+background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(https://res.cloudinary.com/dp3imi0w7/image/upload/v1695635231/tirza-van-dijk-TEYrLTKKMSg-unsplash_q7iost.jpg);
+background-size: cover;
+display: flex;
+justify-content: center;
+flex-direction:column;
 align-items: center;
-max-height: 20px;
-max-width: 20px;
-border-radius: 50%;
-padding: 12px;
-background-color: white;
-color: #1B1C20;
-.icon{
-    font-size: 10px;
+`
+const Title = styled.h1`
+color: #FFF;
+font-size:2.313rem;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-transform: uppercase;
+margin: 0px;
+`
+
+const ContTitle = styled.div`
+max-width: 320px;
+.small{
+font-size: 3rem;
+}
+.big{
+  font-size: 7rem;
+  line-height: 6rem;
+  text-align: center;
 }
 `
+
+
+const ParrafoUno = styled.p`
+color: #FFF;
+font-size: 0.875rem;
+font-style: normal;
+line-height: normal;
+font-family: 'Roboto Flex', sans-serif;
+`
+
+
+
+
 
 
 export const Home = () => {
   return (
     <Cont>
-        <Header>
-            <p>Eldorado Misiones</p>
-        <Title>Olimpiadas Estudiantiles</Title>
-        </Header>
-        <Footer>   
-            <Title>    
-                representa a tu escuela 
-            </Title>
-            <ContLink>
-                <p>
-                Solo los delegados con permisos de la institución podrán realizar las inscripciones
-                </p>
-            </ContLink>
-        </Footer>
+      <Image>
+        <ContTitle>
+        <Title className='small' >Inter Municipales</Title>
+        <Title className='big' >2023</Title>
+        </ContTitle>
+        <ParrafoUno>Los equipos mostrarán sus habilidades y estrategias en el campo de juego mientras compiten por el título de campeón.</ParrafoUno>
+      </Image>
     </Cont>
   )
 }

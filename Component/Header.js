@@ -97,11 +97,12 @@ const Header = () => {
     <StyledHeader>
         <Center>
             <Wrapper>
-            <Logo href={'/'} >  <img src="https://res.cloudinary.com/dp3imi0w7/image/upload/v1690284224/olimpiadas-66tfpsn8muv0__1_-removebg-preview_dsxjf2.png"></img></Logo>
+            <Logo href={'/'} >  <img src="https://res.cloudinary.com/dzqdjsrez/image/upload/v1696936379/olimpiadas-66tfpsn8muv0__1_-removebg-preview_dsxjf2_2_yinag7.png"></img></Logo>
         <StyledNav mobileNavActive={mobileNavActive} >
-            <NavLink href={'/EventosPendientes'} >Agenda de Eventos</NavLink>
-            <NavLink href={'/Reglamento'} >Reglamento</NavLink>
-            <NavLink href={'/Participantes'} >Participantes</NavLink>
+        <NavLink href={'/Voley'} >Voley</NavLink>
+            <NavLink href={'/Futbol'} >Futbol</NavLink>
+            <NavLink href={'/Futsal'} >Futsal</NavLink>
+            <NavLink href={'/FutTenis'} >Futbol Tenis</NavLink>
         </StyledNav>
         <NavButton onClick={ () => setMobileNavActive(prev => !prev)} >
           <RiMenu2Line/>
