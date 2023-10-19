@@ -119,8 +119,9 @@ const Voley = () => {
                       <ButtonLink href={'https://docs.google.com/document/d/1Z8BMXcPBaPW_9opBo2dImKjYqYq8vo6P/edit?usp=sharing&ouid=100664009406258689319&rtpof=true&sd=true'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
                    </CarInfo>
                    <CarInfo>
-                      <Title className='subtitle' >El Sorteo se realizara el 12/10/23</Title>
+                   <Title className='subtitle' >El Sorteo se realizara el 19/10/23</Title>
                       <Title className='parrafo' >18hs Polideportivo Municipal 9km</Title>
+                      <Title className='parrafo' >Requisitos: Lista de buena fe - seguro</Title>
                    </CarInfo>
                    <CarInfo>
                       <Title className='subtitle' >Proximamente....</Title>
@@ -128,7 +129,7 @@ const Voley = () => {
                    </CarInfo>
                    <CarInfo>
                       <Title className='subtitle' >Fecha limite</Title>
-                      <Title className='parrafo' >Presentación de listas de Buena Fe para las diferentes disciplinas  fecha limite 12 de octubre  hasta las 12:30 hs, Polideportivo km 9</Title>
+                      <Title className='parrafo' >Presentación de listas de Buena Fe para las diferentes disciplinas  fecha limite 19 de octubre  hasta las 12:30 hs, Polideportivo km 9</Title>
                    </CarInfo>
                    <CarInfo>
                       <Title className='subtitle' >Voley</Title>
