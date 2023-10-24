@@ -101,6 +101,59 @@ width: 50px;
     color:white;
 }
 `
+const ContPartidos = styled.div`
+box-sizing: border-box;
+width: 100%;
+height: auto;
+padding:16px;
+
+.cont{
+box-sizing: border-box;
+    display:flex;
+    flex-wrap: wrap;
+    gap:16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 16px;
+    :hover{
+        transition: 1s;
+        background-color: #28282A;
+        color:white;
+        .p{
+            color:white;
+        }
+
+    }
+}
+.title{
+    font-size: 39px;
+    color:black;
+    border-bottom: 1px solid black;
+}
+.card{
+    width: fit-content;
+    border: 1px solid #E8E8E8;
+    padding: 16px;
+    border-radius: 8px;
+
+    div{
+        display:flex;
+        gap:8px;
+        
+    }
+    h5{
+        font-family: 'Poppins', sans-serif;
+        font-size:16px ;
+    }
+    p{
+        font-size: 14px;
+        color:gray;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+`
 
 const Futsal = () => {
   return (
@@ -126,21 +179,106 @@ const Futsal = () => {
                       <ButtonLink href={'https://docs.google.com/document/d/1Z8BMXcPBaPW_9opBo2dImKjYqYq8vo6P/edit?usp=sharing&ouid=100664009406258689319&rtpof=true&sd=true'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
                    </CarInfo>
                    <CarInfo>
-                   <Title className='subtitle' >El Sorteo se realizara el 19/10/23</Title>
-                      <Title className='parrafo' >18hs Polideportivo Municipal 9km</Title>
-                      <Title className='parrafo' >Requisitos: Lista de buena fe - seguro</Title>
-                 </CarInfo>
-                   <CarInfo>
-                      <Title className='subtitle' >Proximamente....</Title>
-                      <Title className='parrafo' >Podras encontrar informacion de cuando y donde se juega cada partido</Title>
-                   </CarInfo>
-                   <CarInfo>
                       <Title className='subtitle' >Futsal</Title>
                       <Title className='parrafo' >Garantía de $ 4.000 <br/>Arbitraje  por equipo $ 4.000</Title>
+                   </CarInfo>
+                   <CarInfo>
+                      <Title className='subtitle' >Descarga el Fixture Completo</Title>
+                      <ButtonLink href={'https://drive.google.com/file/d/1WSefDbxh5MO5IpQmMgSC9itoaRRlomKy/view?usp=sharing'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
                    </CarInfo>
                 </div>
             </div>
         </ContReglamento>
+        <ContPartidos>
+        <Title className='title'>
+                   zona A
+                </Title>
+            <div className='cont'>
+                <div className='card'>
+                    <h5>OBRAS PUBLICAS		Vs.	JUZ. DE FALTAS</h5>
+                    <div>
+                    <p>19:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MIERCOLES 25/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5> C.D.E.-MUNI			Vs.	OBRAS PUBLICAS</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>VIERNES 27/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>PRODUCCION 			Vs.	RECOLECCION	</h5>
+                    <div>
+                    <p>21:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>VIERNES 27/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5> CDE-MUNI			Vs.	TRANSITO</h5>
+                    <div>
+                    <p>21:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>LUNES 30/10/2023  </p>
+                    </div>
+                </div>
+            </div>
+
+                <Title className='title'>
+                   zona B
+                </Title>
+                <div className='cont'>
+                <div className='card'>
+                    <h5>PRODUCCION			Vs.	RUSTICA ELDORADO</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MIERCOLES 25/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>PLANTA ASFALTICA		Vs.	RECOLECCION</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MIERCOLES 25/10/2023 </p>
+                    </div>
+                </div>
+
+                <div className='card'>
+                    <h5> PLANTA ASFALTICA		Vs.	RUSTICA ELDORADO	</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>LUNES 30/10/2023  </p>
+                    </div>
+                </div>
+                </div>
+
+
+
+                <Title className='title'>
+                   zona C
+                </Title>
+                <div className='cont'>
+                <div className='card'>
+                    <h5> EDIF. CRISTAL			Vs.	BROMATOLOGIA</h5>
+                    <div>
+                    <p>19:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>VIERNES 27/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5> ACCION SOCIAL		Vs.	EDIF. CENTRAL</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>VIERNES 27/10/2023 </p>
+                    </div>
+                </div>
+
+                <div className='card'>
+                    <h5> EDIF. CRISTAL			Vs.	EDIF. CENTRAL	</h5>
+                    <div>
+                    <p>19:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>LUNES 30/10/2023  </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5> ACCION SOCIAL 		Vs.	BROMATOLOGIA	</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>LUNES 30/10/2023  </p>
+                    </div>
+                </div>
+                </div>
+
+        </ContPartidos>
         <Footer/>
     </ContPage>
   )

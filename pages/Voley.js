@@ -36,7 +36,6 @@ text-transform: uppercase;
 margin: 0px;
 `
 
-
 const ContReglamento = styled.div`
 box-sizing: border-box;
 width: 100%;
@@ -99,6 +98,60 @@ width: 50px;
 }
 `
 
+const ContPartidos = styled.div`
+box-sizing: border-box;
+width: 100%;
+height: auto;
+padding:16px;
+
+.cont{
+box-sizing: border-box;
+    display:flex;
+    flex-wrap: wrap;
+    gap:16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 16px;
+    :hover{
+        transition: 1s;
+        background-color: #28282A;
+        color:white;
+        .p{
+            color:white;
+        }
+
+    }
+}
+.title{
+    font-size: 39px;
+    color:black;
+    border-bottom: 1px solid black;
+}
+.card{
+    width: fit-content;
+    border: 1px solid #E8E8E8;
+    padding: 16px;
+    border-radius: 8px;
+
+    div{
+        display:flex;
+        gap:8px;
+        
+    }
+    h5{
+        font-family: 'Poppins', sans-serif;
+        font-size:16px ;
+    }
+    p{
+        font-size: 14px;
+        color:gray;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+`
+
 const Voley = () => {
   return (
     <ContPage>
@@ -119,25 +172,131 @@ const Voley = () => {
                       <ButtonLink href={'https://docs.google.com/document/d/1Z8BMXcPBaPW_9opBo2dImKjYqYq8vo6P/edit?usp=sharing&ouid=100664009406258689319&rtpof=true&sd=true'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
                    </CarInfo>
                    <CarInfo>
-                   <Title className='subtitle' >El Sorteo se realizara el 19/10/23</Title>
-                      <Title className='parrafo' >18hs Polideportivo Municipal 9km</Title>
-                      <Title className='parrafo' >Requisitos: Lista de buena fe - seguro</Title>
-                   </CarInfo>
-                   <CarInfo>
                       <Title className='subtitle' >Proximamente....</Title>
                       <Title className='parrafo' >Podras encontrar informacion de cuando y donde se juega cada partido</Title>
-                   </CarInfo>
-                   <CarInfo>
-                      <Title className='subtitle' >Fecha limite</Title>
-                      <Title className='parrafo' >Presentación de listas de Buena Fe para las diferentes disciplinas  fecha limite 19 de octubre  hasta las 12:30 hs, Polideportivo km 9</Title>
                    </CarInfo>
                    <CarInfo>
                       <Title className='subtitle' >Voley</Title>
                       <Title className='parrafo' > Garantía $ 2.000 <br/> Arbitraje por equipo $2000</Title>
                    </CarInfo>
+                   <CarInfo>
+                      <Title className='subtitle' >Descarga el Fixture Completo</Title>
+                      <ButtonLink href={'https://drive.google.com/file/d/1nlIdcIgHT1-Ir9wOvXwrej7FexUOBgOf/view?usp=sharing'} target='_blank' > <HiOutlineDocumentArrowDown className='icon'/> </ButtonLink>
+                   </CarInfo>
                 </div>
             </div>
         </ContReglamento>
+        <ContPartidos>
+        <Title className='title'>
+                   zona A
+                </Title>
+            <div className='cont'>
+                <div className='card'>
+                    <h5>EDIF. CRISTAL  Vs.	LA REJUNTA	</h5>
+                    <div>
+                    <p>19:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MARTES 24/10/2023</p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>O. PUBLICAS (ARBOLADO)	Vs.	C.D. OFICIAL	</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MARTES 24/10/2023</p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>O. PUBLICAS (ARBOLADO)	Vs.	DIR. DE TIERRAS</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>JUEVES 26/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>LA REJUNTA			Vs.	CON. DEL. OFICIAL</h5>
+                    <div>
+                    <p>21:00 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>JUEVES 26/10/2023 </p>
+                    </div>
+                </div>
+
+                <div className='card'>
+                    <h5>CON. DEL. OFICIAL		Vs.	EDIF. CRISTAL	</h5>
+                    <div>
+                    <p>19:30 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MARTES 31/10/2023  </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>LA REJUNTA			Vs.	DIR. DE TIERRAS</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MARTES 31/10/2023  </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>O. PUBLICAS (ARBOLADO)	Vs	LA REJUNTA	</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MIERCOLES 01/11/2023  </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>DIR. TIERRAS		Vs.	EDIF. CRITAL</h5>
+                    <div>
+                    <p>21:00 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MIERCOLES 01/11/2023  </p>
+                    </div>
+                </div>
+            </div>
+
+                <Title className='title'>
+                   zona B
+                </Title>
+                <div className='cont'>
+                <div className='card'>
+                    <h5>CONCEJO DEL. ELD.		Vs.	ZOONOSIS	</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MARTES 24/10/2023</p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>REPARTICION(O.PUBLICAS)	Vs.	CIC KM 8</h5>
+                    <div>
+                    <p>21:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>MARTES 24/10/2023</p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>REPARTICION (O. PUBLICAS)	Vs.	MIX BROMATOLOGIA</h5>
+                    <div>
+                    <p>19:30 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>JUEVES 26/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>CIC KM 8 	Vs.	ZOONOSIS</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9  </p><p>JUEVES 26/10/2023 </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>CIC KM 8			Vs.	CONCEJO DEL. ELD.</h5>
+                    <div>
+                    <p>20:30 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MARTES 31/10/2023  </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>ZOONOSIS			Vs.	MIX BROMATOLOGIA</h5>
+                    <div>
+                    <p>21:00 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MARTES 31/10/2023  </p>
+                    </div>
+                </div>
+
+                <div className='card'>
+                    <h5>ZOONOSIS		Vs.	REPARTICION (O.PUBLICAS)</h5>
+                    <div>
+                    <p>19:30 Hs</p><p>POLIDEPORTIVO KM 9 </p><p>MIERCOLES 01/11/2023  </p>
+                    </div>
+                </div>
+                <div className='card'>
+                    <h5>MIX BROMATOLOGIA	Vs.	CONCEJO.DEL. ELD</h5>
+                    <div>
+                    <p>20:00 Hs.</p><p>POLIDEPORTIVO KM 9 </p><p>MIERCOLES 01/11/2023  </p>
+                    </div>
+                </div>
+                </div>
+        </ContPartidos>
         <Footer/>
     </ContPage>
   )
